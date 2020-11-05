@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Regular.ttf') format('truetype supports variations');
+  src: url('fonts/Roboto-Regular.ttf') format('truetype-variations');
+}
+
+@font-face {
+  font-family: 'Shrikhand';
+  src: url('fonts/Shrikhand-Regular.ttf') format('truetype supports variations');
+  src: url('fonts/Shrikhand-Regular.ttf') format('truetype-variations');
+}
+
+html, body {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: map-get($font-weight, normal);
+  font-size: map-get($font-size, root);
+}
+
+.header-logo, .footer-logo, .resto h1 {
+  font-family: 'Shrikhand', Arial, sans-serif;
+  font-weight: map-get($font-weight, light);
+}
+
+.header-logo, .resto h1 {
+  font-size: map-get($font-size, logo);
+}
+
+.footer-logo {
+    font-size: map-get($font-size, footer-logo);
+}
+
+.heading__location, button, footer a {
+  font-size: map-get($font-size, small);
+}
+
+h1, h2 {
+  font-size: map-get($font-size, heading);
+}
+
+article h2 {
+  font-weight: map-get($font-weight, normal);
+}
+
+button, .operation li {
+  font-weight: map-get($font-weight, bold);
+}
+
+a {
+  text-decoration: unset;
+}
+
+header, .heading, .operation li {
+  text-align: center;
+}
