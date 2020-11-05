@@ -6,9 +6,6 @@
   <link rel="icon" type="image/png" href="images/favicon.ico" sizes="32x32">
 
   <!-- CSS files -->
-  <link rel="stylesheet" href="css/fonts/font-awesome/css/fontawesome.min.css">
-  <link rel="stylesheet" href="css/fonts/font-awesome/css/solid.min.css">
-  <link rel="stylesheet" href="css/fonts/font-awesome/css/regular.min.css">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/style_medium.css" media="screen and (min-width: 481px)" />
   <link rel="stylesheet" href="css/style_large.css" media="screen and (min-width: 769px)" />
@@ -18,17 +15,17 @@
 <body>
 
   <header>
-    <!-- <i class="fas fa-arrow-left"></i> --><a>ohmyfood<!-- <img src="images/ohmyfood_logo_png.png" alt="logo oh my food" /> --></a>
+    <a class="header-logo">ohmyfood</a>
   </header>
   <main>
-    <section>
-      <i class="fas fa-map-marker-alt"></i><input type="text" value="Paris, Belleville">
+    <section class="heading">
+      <i class="fas fa-map-marker-alt"></i><input type="text" class="heading__location" value="Paris, Belleville">
       <h1>Réservez le menu qui vous convient</h1>
       <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
       <button>Explorer nos restaurants</button>
     </section>
 
-    <section>
+    <section class="operation">
       <h2>Fonctionnement</h2>
       <ul>
         <li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
@@ -69,7 +66,7 @@
 
   <footer>
     <!-- <img src="images/ohmyfood_logo_png.png" alt="Logo oh my food" /> -->
-    <a>ohmyfood</a>
+    <a class="footer-logo">ohmyfood</a>
     <a><i class="fas fa-utensils"></i>Proposer un restaurant</a>
     <a><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
     <a>Mentions légales</a>
