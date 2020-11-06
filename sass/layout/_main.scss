@@ -1,0 +1,5 @@
+main {
+  &.home-main {
+    padding: map-get($padding, large);
+  }
+}
