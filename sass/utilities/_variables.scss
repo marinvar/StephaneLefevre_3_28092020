@@ -1,6 +1,7 @@
 $fa-font-path: "../css/fonts/font-awesome/webfonts";
 
 $font-size: (
+  fa: 2rem,
   root: 13px,
   logo: 1.85rem,
   footer-logo: 1.155rem,
@@ -14,9 +15,48 @@ $font-weight: (
   light: 300
 );
 
+$margin: (
+  medium: 1rem,
+  small: 0.69rem,
+  xsmall: 0.4rem
+);
+
 $padding: (
   xl: 1.923rem,
   large: 1.5385rem,
   medium: 1.077rem,
-  small: 0.77rem
+  small: 0.77rem,
+  xsmall: 0.5rem
+);
+
+$color: (
+  primary: #9356DC,
+  secondary: #FF79DA,
+  tertiary: #99E2D0,
+  background: #f6f6f6,
+  card-background: white,
+  location: #eaeaea,
+  button: linear-gradient(to right bottom, #FF79DA, #9356DC),
+  heart: linear-gradient(to top, #FF79DA, #9356DC),
+  black: black
+);
+
+$radius: (
+  large: 1.923rem,
+  medium: 1rem,
+  xsmall: 0.2rem
+);
+
+$img: (
+  width: 25.77rem,
+  height: 13.385rem
+);
+
+$shadow: (
+  card: 0 0.385rem 0.5rem lightgray
+);
+
+$heart: (
+  base: 1.5rem,
+  lobe: 0.75rem
 );

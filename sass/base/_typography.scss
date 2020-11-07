@@ -1,13 +1,11 @@
 @font-face {
   font-family: 'Roboto';
-  src: url('fonts/Roboto-Regular.ttf') format('truetype supports variations');
-  src: url('fonts/Roboto-Regular.ttf') format('truetype-variations');
+  src: url('fonts/Roboto-Regular.ttf') format('truetype');  
 }
 
 @font-face {
   font-family: 'Shrikhand';
-  src: url('fonts/Shrikhand-Regular.ttf') format('truetype supports variations');
-  src: url('fonts/Shrikhand-Regular.ttf') format('truetype-variations');
+  src: url('fonts/Shrikhand-Regular.ttf') format('truetype');
 }
 
 html, body {
