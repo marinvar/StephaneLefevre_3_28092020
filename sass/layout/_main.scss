@@ -1,5 +1,11 @@
 main {
   &.home-main {
-    padding: map-get($padding, large);
+    section {
+      padding: map-get($padding, large);
+    }
   }
+}
+
+.home-cards {
+  background-color: map-get($color, background);
 }
