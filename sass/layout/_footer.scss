@@ -12,6 +12,6 @@ footer {
   }
   a {
     cursor: pointer;
-    color: map-get($color, footer-color);    
+    color: map-get($color, font-color-alt);    
   }
 }

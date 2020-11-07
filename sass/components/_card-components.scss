@@ -1,0 +1,44 @@
+.home-cards {
+  img {
+    width: map-get($img, width);
+    height: map-get($img, height);
+    object-fit: cover;
+    object-position: 40% 100%;
+    &.shifted {
+      object-position: 40% 62%;
+      position: relative;
+    }
+  }
+  .new-restaurant {
+    background-color: map-get($color, tertiary);
+    border-radius: map-get($radius, xsmall);
+    padding: map-get($padding, xsmall) map-get($padding, small);
+    color: darken(map-get($color, tertiary), 40);
+    font-weight: map-get($font-weight, bold);
+    position: absolute;
+    top: map-get($margin, medium);
+    right: map-get($margin, medium);
+    z-index: 1;
+  }
+  i {
+    margin: auto map-get($margin, small);
+    font-size: map-get($font-size, fa);
+    transition: all 1s;
+    position: absolute;
+    right: map-get($margin, medium);
+    &.far {
+      z-index: 1;
+      background-color: map-get($color, card-background);
+    }
+    &.far:hover {
+      color: transparent;
+      background-color: unset;
+    }
+    &.fas {
+      background: map-get($color, heart);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

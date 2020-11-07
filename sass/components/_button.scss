@@ -1,0 +1,7 @@
+button {
+  padding: map-get($padding, large);
+  border: none;
+  background: map-get($color, button);
+  border-radius: map-get($radius, large);
+  color: map-get($color, font-color-alt);
+}
