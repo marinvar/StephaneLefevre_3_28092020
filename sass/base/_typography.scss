@@ -16,7 +16,7 @@ html, body {
 
 .header-logo, .footer-logo, .resto h1 {
   font-family: 'Shrikhand', Arial, sans-serif;
-  font-weight: map-get($font-weight, light);
+  font-weight: map-get($font-weight, normal);
 }
 
 .header-logo, .resto h1 {
@@ -45,7 +45,6 @@ button, .operation li {
 
 a {
   text-decoration: unset;
-  color: black;
 }
 
 header, .heading, .operation li {
