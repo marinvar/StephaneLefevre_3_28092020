@@ -1,7 +1,8 @@
-a {
+.home-cards a {
   display: block;
   margin: map-get($margin, small) auto;
   width: fit-content;
+  color: black;
   figure {
     border-radius: map-get($radius, medium);
     width: map-get($img, width);

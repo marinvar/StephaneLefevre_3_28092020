@@ -6125,7 +6125,7 @@ html, body {
 
 .header-logo, .footer-logo, .resto h1 {
   font-family: "Shrikhand", Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .header-logo, .resto h1 {
@@ -6154,7 +6154,6 @@ button, .operation li {
 
 a {
   text-decoration: unset;
-  color: black;
 }
 
 header, .heading, .operation li {
@@ -6169,12 +6168,13 @@ main.home-main section {
   background-color: #f6f6f6;
 }
 
-a {
+.home-cards a {
   display: block;
   margin: 0.69rem auto;
   width: fit-content;
+  color: black;
 }
-a figure {
+.home-cards a figure {
   border-radius: 1rem;
   width: 25.77rem;
   overflow: hidden;
@@ -6182,43 +6182,43 @@ a figure {
   box-shadow: 0 0.385rem 0.5rem lightgray;
   position: relative;
 }
-a figure img {
+.home-cards a figure img {
   width: 25.77rem;
   height: 13.385rem;
   object-fit: cover;
   object-position: 40% 100%;
 }
-a figure img.shifted {
+.home-cards a figure img.shifted {
   object-position: 40% 62%;
   position: relative;
 }
-a figure figcaption {
+.home-cards a figure figcaption {
   padding: 1.077rem;
   display: flex;
   position: relative;
 }
-a figure figcaption span {
+.home-cards a figure figcaption span {
   flex: 1;
 }
-a figure figcaption span h3 {
+.home-cards a figure figcaption span h3 {
   margin-bottom: 0.4rem;
 }
-a figure figcaption i {
+.home-cards a figure figcaption i {
   margin: auto 0.69rem;
   font-size: 2rem;
   transition: all 1s;
   position: absolute;
   right: 1rem;
 }
-a figure figcaption i.far {
+.home-cards a figure figcaption i.far {
   z-index: 1;
   background-color: white;
 }
-a figure figcaption i.far:hover {
+.home-cards a figure figcaption i.far:hover {
   color: transparent;
   background-color: unset;
 }
-a figure figcaption i.fas {
+.home-cards a figure figcaption i.fas {
   background: linear-gradient(to top, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
@@ -6235,6 +6235,24 @@ a figure figcaption i.fas {
   top: 1rem;
   right: 1rem;
   z-index: 1;
+}
+
+footer {
+  padding: 1.5385rem;
+  background-color: #353535;
+}
+footer .fa-ul {
+  margin: auto 1.5385rem;
+}
+footer li {
+  margin: 0.69rem auto;
+}
+footer.no-list-style-type {
+  list-style-type: none;
+}
+footer a {
+  cursor: pointer;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
