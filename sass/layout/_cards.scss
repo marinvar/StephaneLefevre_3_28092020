@@ -2,24 +2,14 @@
   display: block;
   margin: map-get($margin, small) auto;
   width: fit-content;
-  color: black;
+  color: map-get($color, font-color);
   figure {
     border-radius: map-get($radius, medium);
     width: map-get($img, width);
     overflow: hidden;
     background-color: map-get($color, card-background);
-    box-shadow: map-get($shadow, card);
+    box-shadow: map-get($shadow, light);
     position: relative;
-    img {
-      width: map-get($img, width);
-      height: map-get($img, height);
-      object-fit: cover;
-      object-position: 40% 100%;
-      &.shifted {
-        object-position: 40% 62%;
-        position: relative;
-      }
-    }
     figcaption {
       padding: map-get($padding, medium);
       display: flex;
@@ -30,39 +20,6 @@
           margin-bottom: map-get($margin, xsmall);
         }
       }
-      i {
-        margin: auto map-get($margin, small);
-        font-size: map-get($font-size, fa);
-        transition: all 1s;
-        position: absolute;
-        right: map-get($margin, medium);
-        &.far {
-          z-index: 1;
-          background-color: map-get($color, card-background);
-        }
-        &.far:hover {
-          color: transparent;
-          background-color: unset;
-        }
-        &.fas {
-          background: map-get($color, heart);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-      }
     }
   }
-}
-
-.new-restaurant {
-  background-color: map-get($color, tertiary);
-  border-radius: map-get($radius, xsmall);
-  padding: map-get($padding, xsmall) map-get($padding, small);
-  color: darken(map-get($color, tertiary), 40);
-  font-weight: map-get($font-weight, bold);
-  position: absolute;
-  top: map-get($margin, medium);
-  right: map-get($margin, medium);
-  z-index: 1;
 }

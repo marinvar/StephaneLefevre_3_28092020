@@ -1,0 +1,43 @@
+.operation {
+  ol {
+    list-style: none;
+    counter-reset: li;
+    li {
+      text-align: left;
+      counter-increment: li;
+      background-color: map-get($color, operation-list);
+      border-radius: map-get($radius, xm);
+      width: map-get($operation-guide, li-width);
+      height: map-get($operation-guide, li-height);
+      line-height: map-get($operation-guide, li-height);
+      margin: 1rem auto/* map-get($operation-guide, bullet-size) / 2 */;
+      box-shadow: map-get($shadow, light);
+      font-size: map-get($font-size, large);
+      cursor: pointer;
+      &::before {
+        content: counter(li);
+        display: inline-block;
+        text-align: center;
+        width: map-get($operation-guide, bullet-size);
+        height: map-get($operation-guide, bullet-size);
+        background-color: map-get($color, primary);
+        color: map-get($color, font-color-alt);
+        font-size: map-get($font-size, xsmall);
+        font-weight: map-get($font-weight, normal);
+        border-radius: 50%;
+        line-height: map-get($operation-guide, bullet-size);
+        margin-left: map-get($operation-guide, bullet-size) / -2;
+      }
+      &:hover {
+        background-color: lighten(hsl(hue(map-get($color, primary)), 100%, 90%), 6.5);
+      }
+      &:hover i {
+        color: map-get($color, primary)
+      }
+      i {
+        color: darken(map-get($color, location), 42);
+        margin: auto map-get($margin, xl) auto map-get($margin, large);
+      }
+    }
+  }
+}
