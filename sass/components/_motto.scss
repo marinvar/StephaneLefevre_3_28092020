@@ -1,0 +1,13 @@
+.heading-motto {
+  padding: map-get($padding, medium);
+  h1 {
+    max-width: map-get($motto, title-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p {
+    max-width: map-get($motto, subtitle-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

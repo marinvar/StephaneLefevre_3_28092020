@@ -4,4 +4,23 @@ button {
   background: map-get($color, button);
   border-radius: map-get($radius, large);
   color: map-get($color, font-color-alt);
+  box-shadow: map-get($shadow, light);
+  position: relative;
+  transition: all 500ms ease-in-out;
+  &:hover {
+    box-shadow: map-get($shadow, medium);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-in-out;
+    background-color: rgba($color: #fff, $alpha: 0);
+  }
+  &:hover::before {
+    background-color: rgba($color: #fff, $alpha: 0.2);
+  }
 }

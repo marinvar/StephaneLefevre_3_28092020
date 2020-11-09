@@ -6,7 +6,9 @@ $font-size: (
   logo: 1.85rem,
   footer-logo: 1.155rem,
   heading: 1.385rem,
-  small: 0.92308rem
+  large: 1.15rem,
+  small: 0.92308rem,
+  xsmall: 0.77rem
 );
 
 $font-weight: (
@@ -15,6 +17,8 @@ $font-weight: (
 );
 
 $margin: (
+  xl: 2.077rem,
+  large: 1.69rem,
   medium: 1rem,
   small: 0.69rem,
   xsmall: 0.4rem
@@ -33,6 +37,7 @@ $color: (
   secondary: #FF79DA,
   tertiary: #99E2D0,
   restaurants-background: #f6f6f6,
+  operation-list: #f6f6f6,
   card-background: white,
   location: #eaeaea,
   button: linear-gradient(to right bottom, #FF79DA, #9356DC),
@@ -44,6 +49,7 @@ $color: (
 
 $radius: (
   large: 1.923rem,
+  xm: 1.077rem,
   medium: 1rem,
   xsmall: 0.2rem
 );
@@ -54,10 +60,26 @@ $img: (
 );
 
 $shadow: (
-  card: 0 0.385rem 0.5rem lightgray
+  light: 0 0.385rem 0.7rem lightgray,
+  medium: 0 0.3rem 0.7rem darken(lightgray, 20)
 );
 
 $heart: (
   base: 1.5rem,
   lobe: 0.75rem
+);
+
+$operation-guide: (
+  bullet-size: 1.5rem,
+  li-width: 24.77rem,
+  li-height: 5.38rem
+);
+
+$location: (
+  input-width: calc(50% + 35px)
+);
+
+$motto: (
+  title-width: 15rem,
+  subtitle-width: 20rem
 );

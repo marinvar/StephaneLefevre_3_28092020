@@ -8,7 +8,7 @@
     width: map-get($img, width);
     overflow: hidden;
     background-color: map-get($color, card-background);
-    box-shadow: map-get($shadow, card);
+    box-shadow: map-get($shadow, light);
     position: relative;
     figcaption {
       padding: map-get($padding, medium);

@@ -6100,13 +6100,17 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-html, body, ul, h3, figure {
+html, body, ul, ol, h3, figure {
   margin: 0;
   padding: 0;
 }
 
-li {
+footer li {
   list-style-type: none;
+}
+
+button:focus, a:focus, input:focus {
+  outline: unset;
 }
 
 @font-face {
@@ -6160,7 +6164,7 @@ header, .heading, .operation li {
   text-align: center;
 }
 
-main.home-main section {
+main.home-main .operation, main.home-main .home-cards {
   padding: 1.5385rem;
 }
 
@@ -6179,7 +6183,7 @@ main.home-main section {
   width: 25.77rem;
   overflow: hidden;
   background-color: white;
-  box-shadow: 0 0.385rem 0.5rem lightgray;
+  box-shadow: 0 0.385rem 0.7rem lightgray;
   position: relative;
 }
 .home-cards a figure figcaption {
@@ -6261,6 +6265,100 @@ button {
   background: linear-gradient(to right bottom, #FF79DA, #9356DC);
   border-radius: 1.923rem;
   color: white;
+  box-shadow: 0 0.385rem 0.7rem lightgray;
+  position: relative;
+  transition: all 500ms ease-in-out;
+}
+button:hover {
+  box-shadow: 0 0.3rem 0.7rem #a0a0a0;
+}
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease-in-out;
+  background-color: rgba(255, 255, 255, 0);
+}
+button:hover::before {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.operation ol {
+  list-style: none;
+  counter-reset: li;
+}
+.operation ol li {
+  text-align: left;
+  counter-increment: li;
+  background-color: #f6f6f6;
+  border-radius: 1.077rem;
+  width: 24.77rem;
+  height: 5.38rem;
+  line-height: 5.38rem;
+  margin: 1rem auto;
+  box-shadow: 0 0.385rem 0.7rem lightgray;
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+.operation ol li::before {
+  content: counter(li);
+  display: inline-block;
+  text-align: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #9356DC;
+  color: white;
+  font-size: 0.77rem;
+  font-weight: 500;
+  border-radius: 50%;
+  line-height: 1.5rem;
+  margin-left: -0.75rem;
+}
+.operation ol li:hover {
+  background-color: #f5edff;
+}
+.operation ol li:hover i {
+  color: #9356DC;
+}
+.operation ol li i {
+  color: #7f7f7f;
+  margin: auto 2.077rem auto 1.69rem;
+}
+
+.heading-location {
+  background-color: #eaeaea;
+  box-shadow: 0 8px 6px -8px #9e9e9e inset;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.heading-location input {
+  background-color: transparent;
+  border: unset;
+  padding: 1.077rem;
+  width: calc(50% + 35px);
+}
+
+.header-logo {
+  display: block;
+  padding: 0.5rem;
+}
+
+.heading-motto {
+  padding: 1.077rem;
+}
+.heading-motto h1 {
+  max-width: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.heading-motto p {
+  max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

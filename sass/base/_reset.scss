@@ -1,8 +1,14 @@
-html, body, ul, h3, figure {
+html, body, ul, ol, h3, figure {
   margin: 0;
   padding: 0;
 }
 
-li {
+footer li {
   list-style-type: none;
+}
+
+button, a, input {
+  &:focus {
+    outline: unset;
+  }
 }

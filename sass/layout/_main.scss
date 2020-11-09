@@ -1,6 +1,6 @@
 main {
   &.home-main {
-    section {
+    .operation, .home-cards {
       padding: map-get($padding, large);
     }
   }
