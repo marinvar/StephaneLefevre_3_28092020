@@ -7,44 +7,47 @@
 
   <!-- CSS files -->
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/style_medium.css" media="screen and (min-width: 481px)" />
-  <link rel="stylesheet" href="../css/style_large.css" media="screen and (min-width: 769px)" />
+  <!-- <link rel="stylesheet" href="../css/style_medium.css" media="screen and (min-width: 481px)" />
+  <link rel="stylesheet" href="../css/style_large.css" media="screen and (min-width: 769px)" /> -->
   <!-- end css files -->
   <title>ohmyfood</title>
 </head>
 <body>
 
   <header>
-    <i class="fas fa-arrow-left"></i><a class="header-logo">ohmyfood</a>
+    <a href="../index.html"><i class="fas fa-arrow-left"></i></a><a href="../index.html" class="header-logo">ohmyfood</a>
   </header>
 
-  <main>
-    <section class="resto">
-      <img src="../images/restaurants/la-note-enchantee.jpg" alt="Une assiette du restaurant ">
-      <h1>La note enchantée<i class="far fa-heart"></i></h1>
+  <main class="resto">
+    <div class="zoom">
+      <img src="../images/restaurants/la-note-enchantee.jpg" alt="Une assiette du restaurant La note enchantée">
+      <div class="mask"></div>
+    </div>
+    <section>
+      <h1>La note enchantée<i class="far fa-heart"></i><i class="fas fa-heart"></i></h1>
       <article>
         <h2>ENTRÉES</h2>
         <ul>
-          <li><h3>Ravioles de foie gras</h3>Accompagnées de leur crème à la truffe<strong>25€</strong><i class="fas fa-check-circle"></i></li>
-          <li><h3>Caviar osciètre</h3>Sur blini à la farine de blé noir<strong>35€</strong><i class="fas fa-check-circle"></i></li>
-          <li><h3>Homard et espuma de potiron</h3>Mariné aux zestes d'orange<strong>20€</strong><i class="fas fa-check-circle"></i></li>
-          <li><h3>Foie gras de canard cuit entier</h3>Confiture de figue et pain toasté<strong>35€</strong><i class="fas fa-check-circle"></i></li>
+          <li><div class="dish"><h3>Ravioles de foie gras</h3><div class="__served-with"><div class="__served-with--truncate">Accompagnées de leur crème à la truffe</div><strong>25€</strong></div></div><i class="fas fa-check-circle"></i></li>
+          <li><div class="dish"><h3>Caviar osciètre</h3><div class="__served-with"><div class="__served-with--truncate">Sur blini à la farine de blé noir</div><strong>35€</strong></div></div><i class="fas fa-check-circle"></i></li>
+          <li><div class="dish"><h3>Homard et espuma de potiron</h3><div class="__served-with"><div class="__served-with--truncate">Mariné aux zestes d'orange</div><strong>20€</strong></div></div><i class="fas fa-check-circle"></i></li>
+          <li><div class="dish"><h3>Foie gras de canard cuit entier</h3><div class="__served-with"><div class="__served-with--truncate">Confiture de figue et pain toasté</div><strong>35€</strong></div></div><i class="fas fa-check-circle"></i></li>
         </ul>
       </article>
       <article>
         <h2>PLATS</h2>
         <ul>
-          <li><h3>Noix de coquilles Saint-Jacques</h3>Sur lit de purée de céleri-rave<strong>40€</strong><i class="fas fa-check-circle"></i></li>
-          <li><h3>Langoustine poêlée</h3>Purée de patate douce<strong>35€</strong><i class="fas fa-check-circle"></i></li>
-          <li><h3>Mijoté de queue de boeuf</h3>Et riz sauvage aux zestes de citron<strong>44€</strong><i class="fas fa-check-circle"></i></li>
+          <li><div class="dish"><h3>Noix de coquilles Saint-Jacques</h3><div class="__served-with"><div class="__served-with--truncate">Sur lit de purée de céleri-rave</div><strong>40€</strong></div></div><i class="fas fa-check-circle"></i></li>
+          <li><div class="dish"><h3>Langoustine poêlée</h3><div class="__served-with"><div class="__served-with--truncate">Purée de patate douce</div><strong>35€</strong></div></div><i class="fas fa-check-circle"></i></li>
+          <li><div class="dish"><h3>Mijoté de queue de boeuf</h3><div class="__served-with"><div class="__served-with--truncate">Et riz sauvage aux zestes de citron</div><strong>44€</strong></div></div><i class="fas fa-check-circle"></i></li>
         </ul>
       </article>
       <article>
         <h2>DESSERTS</h2>
         <ul>
-          <li><h3>Macaron noisette et chocolat</h3>Glace au caramel brun et sel de Guérande<strong>18€</strong><i class="fas fa-check-circle"></i></li>
-          <li><h3>Baba au rhum revisité</h3>Avec son coulis de citron<strong>22€</strong><i class="fas fa-check-circle"></i></li>
-          <li><h3>Tarte au citron meringuée</h3>Déstructurée<strong>23€</strong><i class="fas fa-check-circle"></i></li>
+          <li><div class="dish"><h3>Macaron noisette et chocolat</h3><div class="__served-with"><div class="__served-with--truncate">Glace au caramel brun et sel de Guérande</div><strong>18€</strong></div></div><i class="fas fa-check-circle"></i></li>
+          <li><div class="dish"><h3>Baba au rhum revisité</h3><div class="__served-with"><div class="__served-with--truncate">Avec son coulis de citron</div><strong>22€</strong></div></div><i class="fas fa-check-circle"></i></li>
+          <li><div class="dish"><h3>Tarte au citron meringuée</h3><div class="__served-with"><div class="__served-with--truncate">Déstructurée</div><strong>23€</strong></div></div><i class="fas fa-check-circle"></i></li>
         </ul>
       </article>
     </section>
@@ -52,11 +55,14 @@
   </main>
 
   <footer>
-    <a class="footer-logo">ohmyfood</a>
-    <a><i class="fas fa-utensils"></i>Proposer un restaurant</a>
-    <a><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
-    <a>Mentions légales</a>
-    <a href="mailto:">Contact</a>
+    <a class="footer-logo" href="#">ohmyfood</a>
+    <ul class="fa-ul">
+      <li><a><span class="fa-li"><i class="fas fa-utensils"></i></span>Proposer un restaurant</a></li>
+      <li><a><span class="fa-li"><i class="fas fa-hands-helping"></i></span>Devenir partenaire</a></li>
+    </ul>
+    <ul>
+      <li class="no-list-style-type"><a>Mentions légales</a></li>
+      <li class="no-list-style-type"><a href="mailto:">Contact</a></li>
+    </ul>
   </footer>
 </body>
-</html>

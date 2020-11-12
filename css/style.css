@@ -6337,7 +6337,7 @@ button:hover::before {
 
 .resto button {
   display: block;
-  margin: 2.077rem auto;
+  margin: 1.69rem auto;
 }
 
 .operation ol {
@@ -6553,6 +6553,7 @@ h1 > i.fas {
 
 .resto {
   background-color: #f6f6f6;
+  padding-bottom: 1.923rem;
 }
 .resto .zoom {
   overflow: hidden;

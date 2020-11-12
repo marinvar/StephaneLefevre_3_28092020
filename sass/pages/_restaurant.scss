@@ -34,6 +34,7 @@ h1 > i {
 
 .resto {
   background-color: map-get($color, restaurants-background);
+  padding-bottom: map-get($padding, xl);
   .zoom {
     overflow: hidden;
     position: relative;
