@@ -7,6 +7,7 @@ button {
   box-shadow: map-get($shadow, light);
   position: relative;
   transition: all 500ms ease-in-out;
+  width: fit-content;
   &:hover {
     box-shadow: map-get($shadow, medium);
   }
@@ -22,5 +23,12 @@ button {
   }
   &:hover::before {
     background-color: rgba($color: #fff, $alpha: 0.2);
+  }
+}
+
+.resto {
+  button {
+    display: block;
+    margin: map-get($margin, xl) auto;
   }
 }

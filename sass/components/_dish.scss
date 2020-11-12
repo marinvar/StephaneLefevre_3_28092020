@@ -1,0 +1,113 @@
+.resto {
+  li {
+    list-style-type: none;
+    border-radius: map-get($radius, medium);
+    margin: map-get($margin, medium) auto;
+    background-color: map-get($color, card-background);
+    line-height: map-get($line-height, resto-li);
+    overflow: hidden;
+    max-width: 26rem;
+    display: flex;
+    .__served-with {
+      display: flex;
+      &--truncate {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+        overflow-wrap: break-word;
+        overflow: hidden;
+      }
+    }
+    &:hover .__served-with {
+      &--truncate {
+        animation: truncate 0.4s ease both;
+      }
+    }
+    &:not(:hover) .__served-with {
+      &--truncate {
+        animation: no-truncate 0.5s ease both;
+      }
+    }
+    &:hover .fa-check-circle {
+      animation: check-slide 0.4s ease-out forwards;
+    }
+    &:hover .fa-check-circle::before {
+      animation: check-rotate 0.5s ease;
+    }
+    &:not(:hover) .fa-check-circle {
+      animation: uncheck-slide 0.4s ease-in-out;
+    }
+    .dish {
+      width: 100%;
+      padding: map-get($padding, small);
+      .served-with {
+        display: flex;
+      }
+    }
+  }
+  strong {
+    margin: map-get($margin, dish-strong);
+    
+  }
+  .fa-check-circle {
+    font-size: map-get($font-size, heading);
+    color: map-get($color, font-color-alt);
+    background-color: map-get($color, tertiary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+  }
+}
+
+@keyframes check-slide {
+  0% {
+    transform: translateX(100%);
+    min-width: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    width: 6rem;
+  }
+}
+
+@keyframes uncheck-slide {
+  0% {
+    transform: translateX(0%);
+    width: 6rem;
+  }
+  100% {
+    transform: translateX(100%);
+    width: 0;
+  }
+}
+
+@keyframes check-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes truncate {
+  0% {  
+    max-width: 20rem;
+  }
+  100% {
+    max-width: 16rem;
+  }
+}
+
+@keyframes no-truncate {
+  0% {  
+    max-width: 16rem;
+  }
+  100% {
+    max-width: 20rem;
+  }
+}

@@ -43,8 +43,13 @@ button, .operation li {
   font-weight: map-get($font-weight, bold);
 }
 
-a {
+a, a:visited {
+  color: map-get($color, font-color);
   text-decoration: unset;
+}
+
+.footer-logo, .footer-logo:visited {
+  color: map-get($color, font-color-alt);
 }
 
 header, .heading, .operation li {

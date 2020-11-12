@@ -1,0 +1,76 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .fa-arrow-left {
+    position: absolute;
+    left: map-get($margin, large);
+    font-size: map-get($font-size, heading);
+    line-height: 0;
+  }
+}
+
+h1 > i {
+  margin: auto map-get($margin, small);
+  font-size: map-get($font-size, fa);
+  transition: all 1s;
+  position: absolute;
+  right: map-get($margin, xl);
+  &.far {
+    z-index: 1;
+    background-color: map-get($color, card-background);
+  }
+  &.far:hover {
+    color: transparent;
+    background-color: unset;
+  }
+  &.fas {
+    background: map-get($color, heart);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.resto {
+  background-color: map-get($color, restaurants-background);
+  .zoom {
+    overflow: hidden;
+    position: relative;
+    .mask {
+      background-color: map-get($color, restaurants-background);
+      border-radius: 3rem 3rem 0 0;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+      height: 3rem;
+      position: absolute;
+    }
+  }
+  img {
+    width: 100%;
+    transform: scale(1.1);
+    transform-origin: top;
+  }
+  h1 {
+    margin: auto;
+    padding: 0 map-get($padding, large) * 2 0 map-get($padding, large);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  h2 {
+    padding: 0 map-get($padding, large);
+    position: relative;
+    margin: map-get($margin, large) auto;
+    &::after {
+      content: "____";
+      left: map-get($padding, large);
+      top: map-get($padding, xsmall);
+      font-size: map-get($font-size, logo);
+      font-weight: map-get($font-weight, bold);
+      color: map-get($color, tertiary);
+      position: absolute;
+    }
+  }
+}
