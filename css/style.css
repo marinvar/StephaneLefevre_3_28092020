@@ -6221,7 +6221,7 @@ footer a {
   color: white;
 }
 
-body {
+.home-body {
   animation: spinner-body 4s;
 }
 
@@ -6439,6 +6439,34 @@ button:hover::before {
   overflow: hidden;
   max-width: 26rem;
   display: flex;
+  animation: fadein 1s ease-in-out both;
+}
+.resto li.li1 {
+  animation-delay: 0.1s;
+}
+.resto li.li2 {
+  animation-delay: 0.2s;
+}
+.resto li.li3 {
+  animation-delay: 0.3s;
+}
+.resto li.li4 {
+  animation-delay: 0.4s;
+}
+.resto li.li5 {
+  animation-delay: 0.5s;
+}
+.resto li.li6 {
+  animation-delay: 0.6s;
+}
+.resto li.li7 {
+  animation-delay: 0.7s;
+}
+.resto li.li8 {
+  animation-delay: 0.8s;
+}
+.resto li.li9 {
+  animation-delay: 0.9s;
 }
 .resto li .__served-with {
   display: flex;
@@ -6530,6 +6558,16 @@ button:hover::before {
   }
   100% {
     max-width: 20rem;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
 header {

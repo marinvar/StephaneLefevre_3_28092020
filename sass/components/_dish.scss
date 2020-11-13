@@ -8,6 +8,12 @@
     overflow: hidden;
     max-width: 26rem;
     display: flex;
+    animation: fadein map-get($anim-dur, medium) ease-in-out both;
+    @for $i from 1 to 10 {
+      &.li#{$i} {
+        animation-delay: $anim-delay * ($i);
+      }
+    }
     .__served-with {
       display: flex;
       &--truncate {
@@ -20,22 +26,22 @@
     }
     &:hover .__served-with {
       &--truncate {
-        animation: truncate 0.4s ease both;
+        animation: truncate map-get($anim-dur, xshort) ease both;
       }
     }
     &:not(:hover) .__served-with {
       &--truncate {
-        animation: no-truncate 0.5s ease both;
+        animation: no-truncate map-get($anim-dur, short) ease both;
       }
     }
     &:hover .fa-check-circle {
-      animation: check-slide 0.4s ease-out forwards;
+      animation: check-slide map-get($anim-dur, xshort) ease-out forwards;
     }
     &:hover .fa-check-circle::before {
-      animation: check-rotate 0.5s ease;
+      animation: check-rotate map-get($anim-dur, short) ease;
     }
     &:not(:hover) .fa-check-circle {
-      animation: uncheck-slide 0.4s ease-in-out;
+      animation: uncheck-slide map-get($anim-dur, xshort) ease-in-out;
     }
     .dish {
       width: 100%;
@@ -45,10 +51,12 @@
       }
     }
   }
+
   strong {
     margin: map-get($margin, dish-strong);
-    
+   
   }
+
   .fa-check-circle {
     font-size: map-get($font-size, heading);
     color: map-get($color, font-color-alt);
@@ -109,5 +117,17 @@
   }
   100% {
     max-width: 20rem;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }

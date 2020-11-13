@@ -1,5 +1,5 @@
-body {
-  animation: spinner-body 4s;
+.home-body {
+  animation: spinner-body map-get($anim-dur, xlong);
 }
 
 .spinner {
@@ -11,14 +11,14 @@ body {
   height: 100%;
   background-color: white;
   z-index: 10;
-  animation: spinner-background 4s;
+  animation: spinner-background map-get($anim-dur, xlong);
   animation-fill-mode: forwards;
   img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     box-shadow: 0 0 5px 7px gray;
-    animation: spinner 2s cubic-bezier(0.6,0,0.4,1) infinite;
+    animation: spinner map-get($anim-dur, long) cubic-bezier(0.6,0,0.4,1) infinite;
     animation-fill-mode: forwards;
   }
 }
