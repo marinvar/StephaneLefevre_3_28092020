@@ -6221,6 +6221,10 @@ footer a {
   color: white;
 }
 
+body {
+  animation: spinner-body 4s;
+}
+
 .spinner {
   position: absolute;
   display: flex;
@@ -6262,6 +6266,17 @@ footer a {
     opacity: 0;
     width: 0;
     height: 0;
+  }
+}
+@keyframes spinner-body {
+  0% {
+    overflow: hidden;
+  }
+  99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: unset;
   }
 }
 .home-cards img {
