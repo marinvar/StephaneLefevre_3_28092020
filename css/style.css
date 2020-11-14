@@ -6745,19 +6745,19 @@ h1 > i.fas {
 }
 .resto .__image--note-enchantee {
   background-position: 50% 45%;
-  background-image: url(../images/restaurants/la-note-enchantee.jpg);
+  background-image: url(../../images/restaurants/la-note-enchantee.jpg);
 }
 .resto .__image--palette-du-gout {
   background-position: 50% 0%;
-  background-image: url(../images/restaurants/la-palette-du-gout.jpg);
+  background-image: url(../../images/restaurants/la-palette-du-gout.jpg);
 }
 .resto .__image--francaise {
   background-position: 50% 0%;
-  background-image: url(../images/restaurants/a-la-francaise.jpg);
+  background-image: url(../../images/restaurants/a-la-francaise.jpg);
 }
 .resto .__image--delice-des-sens {
   background-position: 50% 47%;
-  background-image: url(../images/restaurants/le-delice-des-sens.jpg);
+  background-image: url(../../images/restaurants/le-delice-des-sens.jpg);
 }
 .resto section {
   border-radius: 3rem 3rem 0 0;
