@@ -22,6 +22,7 @@
         display: block;
         overflow-wrap: break-word;
         overflow: hidden;
+        margin-right: map-get($margin, small);
       }
     }
     &:hover .__served-with {

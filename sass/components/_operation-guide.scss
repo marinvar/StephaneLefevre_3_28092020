@@ -47,7 +47,7 @@
     ol {
       display: flex;
       li {
-        width: map-get($operation-guide, li-width-xsmall);
+        width: map-get($operation-guide, li-width-xxsmall);
         i {
           margin: auto map-get($margin, small) auto map-get($margin, small);
         }
@@ -60,7 +60,7 @@
   .operation {
     ol {
       li {
-        width: map-get($operation-guide, li-width-small);
+        width: map-get($operation-guide, li-width-xsmall);
         i {
           margin: auto map-get($margin, medium) auto map-get($margin, medium);
         }
