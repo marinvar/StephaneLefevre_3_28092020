@@ -1,8 +1,35 @@
 main {
   &.home-main {
+    background-color: map-get($color, card-background);
     .operation, .home-cards {
       padding: map-get($padding, large);
     }
+  }
+}
+@media (min-width: 500px) {
+  main {
+    max-width: map-get($main-width, small);
+    margin: auto;
+    box-shadow: map-get($shadow, main);
+    clip-path: map-get($clip-path, main);
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    max-width: map-get($main-width, medium);
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    max-width: map-get($main-width, large);
+  }
+}
+
+@media (min-width: 1600px) {
+  main {
+    max-width: map-get($main-width, xl);
   }
 }
 

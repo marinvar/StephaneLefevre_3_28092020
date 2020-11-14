@@ -6140,7 +6140,7 @@ html, body {
   font-size: 1.155rem;
 }
 
-.heading__location, button, footer a {
+.heading__location input, button, footer a {
   font-size: 0.92308rem;
 }
 
@@ -6169,17 +6169,93 @@ header, .heading, .operation li {
   text-align: center;
 }
 
+@media (min-width: 1024px) {
+  html, body {
+    font-size: 16px;
+  }
+
+  .heading__location input, button, footer a {
+    font-size: 1.15rem;
+  }
+}
+@media (min-width: 1600px) {
+  html, body {
+    font-size: 18px;
+  }
+
+  .heading__location input, button, footer a {
+    font-size: 1.385rem;
+  }
+}
+@media (min-width: 500px) {
+  body {
+    background-color: #dddddd;
+  }
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .fa-arrow-left {
+  position: absolute;
+  left: 1.69rem;
+  font-size: 1.385rem;
+  line-height: 0;
+}
+
+@media (min-width: 500px) {
+  body {
+    background-color: #dddddd;
+  }
+
+  header {
+    background-color: white;
+  }
+}
+@media (min-width: 768px) {
+  .header-logo {
+    font-size: 2.5rem;
+  }
+}
+main.home-main {
+  background-color: white;
+}
 main.home-main .operation, main.home-main .home-cards {
   padding: 1.5385rem;
 }
 
+@media (min-width: 500px) {
+  main {
+    max-width: 38rem;
+    margin: auto;
+    box-shadow: 1rem 0 1rem -1rem #878787, -1rem 0 1rem -1rem #878787;
+    clip-path: inset(0 -1rem 0 -1rem);
+  }
+}
+@media (min-width: 768px) {
+  main {
+    max-width: 57rem;
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    max-width: 76rem;
+  }
+}
+@media (min-width: 1600px) {
+  main {
+    max-width: 88rem;
+  }
+}
 .home-cards {
   background-color: #f6f6f6;
 }
 
 .home-cards a {
   display: block;
-  margin: 0.69rem auto;
+  margin: auto;
+  padding: 1.077rem 0;
   width: fit-content;
   color: black;
 }
@@ -6203,6 +6279,11 @@ main.home-main .operation, main.home-main .home-cards {
   margin-bottom: 0.4rem;
 }
 
+@media (min-width: 768px) {
+  .__cards {
+    columns: 2;
+  }
+}
 footer {
   padding: 1.5385rem;
   background-color: #353535;
@@ -6213,7 +6294,7 @@ footer .fa-ul {
 footer li {
   margin: 0.69rem auto;
 }
-footer.no-list-style-type {
+footer .__links--no-list-style-type {
   list-style-type: none;
 }
 footer a {
@@ -6221,6 +6302,27 @@ footer a {
   color: white;
 }
 
+@media (min-width: 500px) {
+  footer .footer-logo {
+    display: block;
+    text-align: center;
+  }
+  footer .__links {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 768px) {
+  footer a.footer-logo {
+    font-size: 1.385rem;
+  }
+
+  ul {
+    display: flex;
+    flex: auto;
+    justify-content: space-around;
+  }
+}
 .home-body {
   animation: spinner-body 4s;
 }
@@ -6332,6 +6434,7 @@ button {
   position: relative;
   transition: all 500ms ease-in-out;
   width: fit-content;
+  cursor: pointer;
 }
 button:hover {
   box-shadow: 0 0.3rem 0.7rem #878787;
@@ -6397,14 +6500,41 @@ button:hover::before {
   margin: auto 2.077rem auto 1.69rem;
 }
 
-.heading-location {
+@media (min-width: 768px) {
+  .operation ol {
+    display: flex;
+  }
+  .operation ol li {
+    width: 16rem;
+  }
+  .operation ol li i {
+    margin: auto 0.69rem auto 0.69rem;
+  }
+}
+@media (min-width: 1024px) {
+  .operation ol li {
+    width: 20rem;
+  }
+  .operation ol li i {
+    margin: auto 1rem auto 1rem;
+  }
+}
+@media (min-width: 1600px) {
+  .operation ol li {
+    width: 24.77rem;
+  }
+  .operation ol li i {
+    margin: auto 2.077rem auto 1.69rem;
+  }
+}
+.heading__location {
   background-color: #eaeaea;
   box-shadow: 0 8px 6px -8px #9e9e9e inset;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-.heading-location input {
+.heading__location input {
   background-color: transparent;
   border: unset;
   padding: 1.077rem;
@@ -6430,6 +6560,14 @@ button:hover::before {
   margin-right: auto;
 }
 
+@media (min-width: 768px) {
+  .heading-motto h1 {
+    max-width: unset;
+  }
+  .heading-motto p {
+    max-width: unset;
+  }
+}
 .resto li {
   list-style-type: none;
   border-radius: 1rem;
@@ -6570,18 +6708,6 @@ button:hover::before {
     transform: translateY(0%);
   }
 }
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-header .fa-arrow-left {
-  position: absolute;
-  left: 1.69rem;
-  font-size: 1.385rem;
-  line-height: 0;
-}
-
 h1 > i {
   margin: auto 0.69rem;
   font-size: 2rem;

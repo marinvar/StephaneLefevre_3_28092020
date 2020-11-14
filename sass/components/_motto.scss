@@ -11,3 +11,14 @@
     margin-right: auto;
   }
 }
+
+@media (min-width: 768px) {
+  .heading-motto {
+    h1 {
+      max-width: unset;
+    }
+    p {
+      max-width: unset;
+    }
+  }
+}

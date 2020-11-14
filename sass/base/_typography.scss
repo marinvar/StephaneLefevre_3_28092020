@@ -27,7 +27,7 @@ html, body {
     font-size: map-get($font-size, footer-logo);
 }
 
-.heading__location, button, footer a {
+.heading__location input, button, footer a {
   font-size: map-get($font-size, small);
 }
 
@@ -54,4 +54,22 @@ a, a:visited {
 
 header, .heading, .operation li {
   text-align: center;
+}
+
+@media (min-width: 1024px) {
+  html, body {
+    font-size: 16px;
+  }
+  .heading__location input, button, footer a {
+    font-size: map-get($font-size, large);
+  }
+}
+
+@media (min-width: 1600px) {
+  html, body {
+    font-size: 18px;
+  }
+  .heading__location input, button, footer a {
+    font-size: map-get($font-size, heading);
+  }
 }

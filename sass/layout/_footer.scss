@@ -7,11 +7,41 @@ footer {
   li {
     margin: map-get($margin, small) auto;
   }
-  &.no-list-style-type {
-    list-style-type: none;
+  .__links {
+    &--no-list-style-type {
+      list-style-type: none;
+    }
   }
   a {
     cursor: pointer;
     color: map-get($color, font-color-alt);    
+  }
+}
+
+@media (min-width: 500px) {
+  footer {
+    .footer-logo {
+      display: block;
+      text-align: center;
+    }
+    .__links {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    a {
+      &.footer-logo {
+        font-size: map-get($font-size, heading);
+      }
+    }
+  }
+  ul {
+    display: flex;
+    flex: auto;
+    justify-content: space-around;
   }
 }

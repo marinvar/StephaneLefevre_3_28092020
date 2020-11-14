@@ -7,7 +7,7 @@
       counter-increment: li;
       background-color: map-get($color, operation-list);
       border-radius: map-get($radius, xm);
-      width: map-get($operation-guide, li-width);
+      width: map-get($operation-guide, li-width-medium);
       height: map-get($operation-guide, li-height);
       line-height: map-get($operation-guide, li-height);
       margin: 1rem auto/* map-get($operation-guide, bullet-size) / 2 */;
@@ -37,6 +37,46 @@
       i {
         color: darken(map-get($color, location), 42);
         margin: auto map-get($margin, xl) auto map-get($margin, large);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .operation {
+    ol {
+      display: flex;
+      li {
+        width: map-get($operation-guide, li-width-xsmall);
+        i {
+          margin: auto map-get($margin, small) auto map-get($margin, small);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .operation {
+    ol {
+      li {
+        width: map-get($operation-guide, li-width-small);
+        i {
+          margin: auto map-get($margin, medium) auto map-get($margin, medium);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .operation {
+    ol {
+      li {
+        width: map-get($operation-guide, li-width-medium);
+        i {
+          margin: auto map-get($margin, xl) auto map-get($margin, large);
+        }
       }
     }
   }
