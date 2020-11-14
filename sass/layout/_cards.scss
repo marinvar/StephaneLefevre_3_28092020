@@ -1,25 +1,29 @@
-.home-cards 
+.home-cards {
+  h2 {
+    padding-left: map-get($padding, large);
+  }
   a {
-  display: block;
-  margin: auto;
-  padding: map-get($padding, medium) 0;
-  width: fit-content;
-  color: map-get($color, font-color);
-  figure {
-    border-radius: map-get($radius, medium);
-    width: map-get($img, width);
-    overflow: hidden;
-    background-color: map-get($color, card-background);
-    box-shadow: map-get($shadow, light);
-    position: relative;
-    figcaption {
-      padding: map-get($padding, medium);
-      display: flex;
+    display: block;
+    margin: auto;
+    padding: map-get($padding, medium) 0;
+    width: fit-content;
+    color: map-get($color, font-color);
+    figure {
+      border-radius: map-get($radius, medium);
+      width: map-get($img, width);
+      overflow: hidden;
+      background-color: map-get($color, card-background);
+      box-shadow: map-get($shadow, light);
+      position: relative;
+      figcaption {
+        padding: map-get($padding, medium);
+        display: flex;
         position: relative;
-      span {
-        flex: 1;
-        h3 {
-          margin-bottom: map-get($margin, xsmall);
+        div {
+          flex: 1;
+          h3 {
+            margin-bottom: map-get($margin, xsmall);
+          }
         }
       }
     }
