@@ -33,6 +33,7 @@ html, body {
 
 h1, h2 {
   font-size: map-get($font-size, heading);
+  text-decoration: none;
 }
 
 article h2 {
@@ -45,7 +46,7 @@ button, .operation li {
 
 a, a:visited {
   color: map-get($color, font-color);
-  text-decoration: unset;
+  text-decoration: none;
 }
 
 .footer-logo, .footer-logo:visited {

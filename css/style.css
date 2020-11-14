@@ -6146,6 +6146,7 @@ html, body {
 
 h1, h2 {
   font-size: 1.385rem;
+  text-decoration: none;
 }
 
 article h2 {
@@ -6158,7 +6159,7 @@ button, .operation li {
 
 a, a:visited {
   color: black;
-  text-decoration: unset;
+  text-decoration: none;
 }
 
 .footer-logo, .footer-logo:visited {
@@ -6540,7 +6541,7 @@ button:hover::before {
 }
 .heading__location input {
   background-color: transparent;
-  border: unset;
+  border: none;
   padding: 1.077rem;
   width: calc(50% + 35px);
 }

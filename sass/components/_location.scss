@@ -6,7 +6,7 @@
   justify-content: flex-end;
   input {
     background-color: transparent;
-    border: unset;
+    border: none;
     padding: map-get($padding, medium);
     width: map-get($location, input-width);
   }
