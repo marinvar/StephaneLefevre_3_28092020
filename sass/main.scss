@@ -9,6 +9,7 @@
 @import 'base/typography';
 @import 'base/base';
 
+@import 'layout/header';
 @import 'layout/main';
 @import 'layout/cards';
 @import 'layout/footer';
@@ -16,7 +17,7 @@
 
 @import 'components/card-components';
 @import 'components/button';
-@import 'components/operation-guide-component';
+@import 'components/operation-guide';
 @import 'components/location';
 @import 'components/logo';
 @import 'components/motto';

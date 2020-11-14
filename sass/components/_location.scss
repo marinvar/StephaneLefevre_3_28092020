@@ -1,4 +1,4 @@
-.heading-location {
+.heading__location {
   background-color: map-get($color, location);
   box-shadow: 0 8px 6px -8px darken(map-get($color, location), 30) inset;
   display: flex;

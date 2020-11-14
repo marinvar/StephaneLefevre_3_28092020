@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .fa-arrow-left {
+    position: absolute;
+    left: map-get($margin, large);
+    font-size: map-get($font-size, heading);
+    line-height: 0;
+  }
+}
+
+@media (min-width: 500px) {
+  body {
+    background-color: darken(map-get($color, restaurants-background), 10);
+  }
+  header {
+    background-color: map-get($color, card-background);
+  }
+}
+
+@media (min-width: 768px) {
+  .header-logo {
+    font-size: map-get($font-size, large-logo);
+  }
+}

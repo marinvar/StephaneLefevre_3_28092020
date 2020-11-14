@@ -1,6 +1,7 @@
 $fa-font-path: "../css/fonts/font-awesome/webfonts";
 
 $font-size: (
+  large-logo: 2.5rem,
   fa: 2rem,
   root: 13px,
   logo: 1.85rem,
@@ -63,7 +64,12 @@ $img: (
 
 $shadow: (
   light: 0 0.385rem 0.7rem lightgray,
-  medium: 0 0.3rem 0.7rem darken(lightgray, 30)
+  medium: 0 0.3rem 0.7rem darken(lightgray, 30),
+  main: (1rem 0 1rem -1rem darken(lightgray, 30), -1rem 0 1rem -1rem darken(lightgray, 30))
+);
+
+$clip-path: (
+  main: inset(0 -1rem 0 -1rem)
 );
 
 $heart: (
@@ -73,7 +79,9 @@ $heart: (
 
 $operation-guide: (
   bullet-size: 1.5rem,
-  li-width: 24.77rem,
+  li-width-medium: 24.77rem,
+  li-width-small: 20rem,
+  li-width-xsmall: 16rem,
   li-height: 5.38rem
 );
 
@@ -99,3 +107,10 @@ $anim-dur: (
 );
 
 $anim-delay: 0.1s;
+
+$main-width: (
+  small: 38rem,
+  medium: 57rem,
+  large: 76rem,
+  xl: 88rem
+);

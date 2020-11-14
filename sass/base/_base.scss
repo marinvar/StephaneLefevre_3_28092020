@@ -1,0 +1,5 @@
+@media (min-width: 500px) {
+  body {
+    background-color: darken(map-get($color, restaurants-background), 10);
+  }
+}
