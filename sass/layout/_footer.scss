@@ -14,7 +14,10 @@ footer {
   }
   a {
     cursor: pointer;
-    color: map-get($color, font-color-alt);    
+    color: map-get($color, font-color-alt);
+    &:hover {
+      text-decoration: underline;
+    } 
   }
 }
 

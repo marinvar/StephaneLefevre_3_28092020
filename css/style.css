@@ -6198,6 +6198,9 @@ header {
   align-items: center;
   justify-content: center;
 }
+header a {
+  cursor: pointer;
+}
 header .fa-arrow-left {
   position: absolute;
   left: 1.69rem;
@@ -6307,6 +6310,9 @@ footer .__links--no-list-style-type {
 footer a {
   cursor: pointer;
   color: white;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 500px) {

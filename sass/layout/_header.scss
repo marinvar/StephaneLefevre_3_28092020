@@ -2,6 +2,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  a {
+    cursor: pointer;
+  }
   .fa-arrow-left {
     position: absolute;
     left: map-get($margin, large);
