@@ -88,7 +88,8 @@ $operation-guide: (
 );
 
 $location: (
-  input-width: calc(50% + 35px)
+  input-width: calc(50% + 35px),
+  map-border: 0.1rem solid darken(lightgray, 30)
 );
 
 $motto: (

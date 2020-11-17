@@ -6464,6 +6464,12 @@ button:hover::before {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* 
+.home-main {
+  button {
+    margin-top: map-get($margin, xl);
+  }
+} */
 .resto button {
   display: block;
   margin: 1.69rem auto;
@@ -6538,45 +6544,76 @@ button:hover::before {
     margin: auto 2.077rem auto 1.69rem;
   }
 }
-.heading__location {
+.heading__location-input {
   background-color: #eaeaea;
   box-shadow: 0 8px 6px -8px #9e9e9e inset;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-.heading__location input {
+.heading__location-input input {
   background-color: transparent;
   border: none;
   padding: 1.077rem;
   width: calc(50% + 35px);
 }
+.heading__map {
+  border: 0.1rem solid #878787;
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 0.7rem #878787;
+  width: 20vw;
+  height: 20vh;
+  display: none;
+}
 
+@media (min-width: 1024px) {
+  .heading__large {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .heading__large .heading__location {
+    order: 2;
+  }
+  .heading__large .heading__location-input {
+    border-radius: 1.923rem;
+  }
+  .heading__large .heading__map {
+    margin: 0.4rem auto;
+    display: block;
+  }
+  .heading__large .heading-motto {
+    order: 1;
+  }
+}
 .header-logo {
   display: block;
   padding: 0.5rem;
 }
 
-.heading-motto {
+.heading__motto {
   padding: 1.077rem;
 }
-.heading-motto h1 {
-  max-width: 15rem;
+.heading__motto h1, .heading__motto p {
   margin-left: auto;
   margin-right: auto;
 }
-.heading-motto p {
+.heading__motto h1 {
+  max-width: 15rem;
+}
+.heading__motto p {
   max-width: 20rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 @media (min-width: 768px) {
-  .heading-motto h1 {
+  .heading__motto h1, .heading__motto p {
     max-width: unset;
   }
-  .heading-motto p {
-    max-width: unset;
+}
+@media (min-width: 1024px) {
+  .heading__motto h1, .heading__motto p {
+    text-align: left;
+    margin-left: unset;
   }
 }
 .resto li {

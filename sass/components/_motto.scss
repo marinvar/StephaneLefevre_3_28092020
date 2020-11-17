@@ -1,24 +1,30 @@
-.heading-motto {
+.heading__motto {
   padding: map-get($padding, medium);
-  h1 {
-    max-width: map-get($motto, title-width);
+  h1, p {
     margin-left: auto;
     margin-right: auto;
   }
+  h1 {
+    max-width: map-get($motto, title-width);
+  }
   p {
     max-width: map-get($motto, subtitle-width);
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
 @media (min-width: 768px) {
-  .heading-motto {
-    h1 {
+  .heading__motto {
+    h1, p {
       max-width: unset;
     }
-    p {
-      max-width: unset;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading__motto {
+    h1, p {
+      text-align: left;
+      margin-left: unset;
     }
   }
 }
