@@ -37,6 +37,8 @@
       &__map {
         margin: map-get($margin, xsmall) auto;
         display: block;
+        object-fit: cover;
+        object-position: center;
       }
       &-motto {
         order: 1;

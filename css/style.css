@@ -6581,6 +6581,8 @@ button:hover::before {
   .heading__large .heading__map {
     margin: 0.4rem auto;
     display: block;
+    object-fit: cover;
+    object-position: center;
   }
   .heading__large .heading-motto {
     order: 1;
