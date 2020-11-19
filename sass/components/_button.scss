@@ -1,4 +1,4 @@
-button {
+button, .heading__explore-button {
   padding: map-get($padding, large);
   border: none;
   background: map-get($color, button);
@@ -26,12 +26,6 @@ button {
     background-color: rgba($color: #fff, $alpha: 0.2);
   }
 }
-/* 
-.home-main {
-  button {
-    margin-top: map-get($margin, xl);
-  }
-} */
 
 .resto {
   button {

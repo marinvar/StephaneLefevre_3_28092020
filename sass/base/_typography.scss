@@ -40,7 +40,7 @@ article h2 {
   font-weight: map-get($font-weight, normal);
 }
 
-button, .operation li {
+button, .heading__explore-button, .operation li {
   font-weight: map-get($font-weight, bold);
 }
 
@@ -61,7 +61,7 @@ header, .heading, .operation li {
   html, body {
     font-size: 16px;
   }
-  .heading__location input, button, footer a {
+  .heading__location input, button, .heading__explore-button, footer a {
     font-size: map-get($font-size, large);
   }
 }
@@ -70,7 +70,7 @@ header, .heading, .operation li {
   html, body {
     font-size: 18px;
   }
-  .heading__location input, button, footer a {
+  .heading__location input, button, .heading__explore-button, footer a {
     font-size: map-get($font-size, heading);
   }
 }

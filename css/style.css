@@ -6153,7 +6153,7 @@ article h2 {
   font-weight: 500;
 }
 
-button, .operation li {
+button, .heading__explore-button, .operation li {
   font-weight: 600;
 }
 
@@ -6175,7 +6175,7 @@ header, .heading, .operation li {
     font-size: 16px;
   }
 
-  .heading__location input, button, footer a {
+  .heading__location input, button, .heading__explore-button, footer a {
     font-size: 1.15rem;
   }
 }
@@ -6184,7 +6184,7 @@ header, .heading, .operation li {
     font-size: 18px;
   }
 
-  .heading__location input, button, footer a {
+  .heading__location input, button, .heading__explore-button, footer a {
     font-size: 1.385rem;
   }
 }
@@ -6261,13 +6261,21 @@ main.home-main .home-cards {
 
 .home-cards h2 {
   padding-left: 1.5385rem;
+  margin: auto;
+}
+.home-cards__cards {
+  margin: 1.69rem auto;
 }
 .home-cards a {
   display: block;
-  margin: auto;
-  padding: 1.077rem 0;
+  margin: 1.69rem auto;
+  padding: 0;
   width: fit-content;
   color: black;
+  border-radius: 1rem;
+}
+.home-cards a:hover {
+  box-shadow: 0 0.385rem 1rem 0.05rem #9356DC;
 }
 .home-cards a figure {
   border-radius: 1rem;
@@ -6290,7 +6298,7 @@ main.home-main .home-cards {
 }
 
 @media (min-width: 768px) {
-  .__cards {
+  .home-cards__cards {
     columns: 2;
   }
 }
@@ -6410,8 +6418,8 @@ footer a:hover {
   color: #278870;
   font-weight: 600;
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1.077rem;
+  right: 1.077rem;
   z-index: 1;
 }
 .home-cards i {
@@ -6419,7 +6427,7 @@ footer a:hover {
   font-size: 2rem;
   transition: all 1s;
   position: absolute;
-  right: 1rem;
+  right: 1.077rem;
 }
 .home-cards i.far {
   z-index: 1;
@@ -6435,7 +6443,7 @@ footer a:hover {
   -webkit-text-fill-color: transparent;
 }
 
-button {
+button, .heading__explore-button {
   padding: 1.5385rem;
   border: none;
   background: linear-gradient(to right bottom, #FF79DA, #9356DC);
@@ -6447,10 +6455,10 @@ button {
   width: fit-content;
   cursor: pointer;
 }
-button:hover {
+button:hover, .heading__explore-button:hover {
   box-shadow: 0 0.3rem 0.7rem #878787;
 }
-button::before {
+button::before, .heading__explore-button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -6460,16 +6468,10 @@ button::before {
   transition: all 500ms ease-in-out;
   background-color: rgba(255, 255, 255, 0);
 }
-button:hover::before {
+button:hover::before, .heading__explore-button:hover::before {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* 
-.home-main {
-  button {
-    margin-top: map-get($margin, xl);
-  }
-} */
 .resto button {
   display: block;
   margin: 1.69rem auto;
@@ -6533,7 +6535,7 @@ button:hover::before {
     width: 18rem;
   }
   .operation ol li i {
-    margin: auto 1rem auto 1rem;
+    margin: auto 1.077rem auto 1.077rem;
   }
 }
 @media (min-width: 1600px) {
@@ -6550,6 +6552,17 @@ button:hover::before {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  opacity: 99%;
+}
+.heading__location-input:hover::before {
+  content: "";
+  box-shadow: 0 0rem 0.5rem 0.01rem #9356DC inset;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 .heading__location-input input {
   background-color: transparent;
@@ -6621,12 +6634,13 @@ button:hover::before {
 .resto li {
   list-style-type: none;
   border-radius: 1rem;
-  margin: 1rem auto;
+  margin: 1.077rem auto;
   background-color: white;
   line-height: 1.5rem;
   overflow: hidden;
-  max-width: 26rem;
+  max-width: 30rem;
   display: flex;
+  justify-content: center;
   animation: fadein 1s ease-in-out both;
 }
 .resto li.li1 {
@@ -6658,6 +6672,13 @@ button:hover::before {
 }
 .resto li .__served-with {
   display: flex;
+  overflow: auto;
+  flex-direction: column;
+}
+.resto li .__served-with h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .resto li .__served-with--truncate {
   text-overflow: ellipsis;
@@ -6666,12 +6687,6 @@ button:hover::before {
   overflow-wrap: break-word;
   overflow: hidden;
   margin-right: 0.69rem;
-}
-.resto li:hover .__served-with--truncate {
-  animation: truncate 0.4s ease both;
-}
-.resto li:not(:hover) .__served-with--truncate {
-  animation: no-truncate 0.5s ease both;
 }
 .resto li:hover .fa-check-circle {
   animation: check-slide 0.4s ease-out forwards;
@@ -6684,10 +6699,9 @@ button:hover::before {
 }
 .resto li .dish {
   width: 100%;
-  padding: 0.77rem;
-}
-.resto li .dish .served-with {
+  overflow: hidden;
   display: flex;
+  padding: 0.77rem;
 }
 .resto strong {
   margin: auto 1rem auto auto;
@@ -6733,22 +6747,6 @@ button:hover::before {
     transform: rotate(360deg);
   }
 }
-@keyframes truncate {
-  0% {
-    max-width: 20rem;
-  }
-  100% {
-    max-width: 16rem;
-  }
-}
-@keyframes no-truncate {
-  0% {
-    max-width: 16rem;
-  }
-  100% {
-    max-width: 20rem;
-  }
-}
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -6768,7 +6766,7 @@ h1 > i {
 }
 h1 > i.far {
   z-index: 1;
-  background-color: white;
+  background-color: #f6f6f6;
 }
 h1 > i.far:hover {
   color: transparent;
@@ -6808,7 +6806,7 @@ h1 > i.fas {
 .resto section {
   border-radius: 3rem 3rem 0 0;
   background-color: #f6f6f6;
-  padding-top: 1.923rem;
+  padding: 1.923rem 1.077rem;
   margin-top: -3rem;
 }
 .resto img {
@@ -6818,20 +6816,19 @@ h1 > i.fas {
 }
 .resto h1 {
   margin: auto;
-  padding: 0 3.077rem 0 1.5385rem;
+  padding: 0 5.769rem 0 0;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   position: relative;
 }
 .resto h2 {
-  padding: 0 1.5385rem;
+  /* padding: 0 map-get($padding, large); */
   position: relative;
   margin: 1.69rem auto;
 }
-.resto h2::after {
+.resto h2::before {
   content: "____";
-  left: 1.5385rem;
   top: 0.5rem;
   font-size: 1.85rem;
   font-weight: 600;
@@ -6840,6 +6837,13 @@ h1 > i.fas {
 }
 
 @media (min-width: 768px) {
+  .resto h1 {
+    margin-left: 3rem;
+  }
+  .resto h2 {
+    text-align: center;
+    padding: unset;
+  }
   .resto .__image {
     min-height: 30rem;
   }

@@ -6,7 +6,7 @@ h1 > i {
   right: map-get($margin, xl);
   &.far {
     z-index: 1;
-    background-color: map-get($color, card-background);
+    background-color: map-get($color, restaurants-background);
   }
   &.far:hover {
     color: transparent;
@@ -45,7 +45,7 @@ h1 > i {
   section {
     border-radius: 3rem 3rem 0 0;
     background-color: map-get($color, restaurants-background);
-    padding-top: map-get($padding, xl);
+    padding: map-get($padding, xl) map-get($padding, medium);
     margin-top: map-get($margin, xxl) * -1;
   }
   img {
@@ -55,19 +55,18 @@ h1 > i {
   }
   h1 {
     margin: auto;
-    padding: 0 map-get($padding, large) * 2 0 map-get($padding, large);
+    padding: 0 map-get($padding, xl) * 3 0 0;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     position: relative;
   }
   h2 {
-    padding: 0 map-get($padding, large);
+    /* padding: 0 map-get($padding, large); */
     position: relative;
     margin: map-get($margin, large) auto;
-    &::after {
+    &::before {
       content: "____";
-      left: map-get($padding, large);
       top: map-get($padding, xsmall);
       font-size: map-get($font-size, logo);
       font-weight: map-get($font-weight, bold);
@@ -79,6 +78,13 @@ h1 > i {
 
 @media (min-width: 768px) {
   .resto {
+    h1 {
+      margin-left: map-get($margin, xxl);
+    }
+    h2 {
+      text-align: center;
+      padding: unset;
+    }
     .__image {
       min-height: 30rem;
     }

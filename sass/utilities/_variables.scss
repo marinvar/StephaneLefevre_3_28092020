@@ -21,7 +21,7 @@ $margin: (
   xxl: 3rem,
   xl: 2.077rem,
   large: 1.69rem,
-  medium: 1rem,
+  medium: 1.077rem,
   small: 0.69rem,
   xsmall: 0.4rem,
   dish-strong: auto 1rem auto auto
@@ -64,6 +64,8 @@ $img: (
 );
 
 $shadow: (
+  cards: 0 0.385rem 1rem 0.05rem #9356DC,
+  location: 0 0rem 0.5rem 0.01rem #9356DC inset,
   light: 0 0.385rem 0.7rem lightgray,
   medium: 0 0.3rem 0.7rem darken(lightgray, 30),
   main: (1rem 0 1rem -1rem darken(lightgray, 30), -1rem 0 1rem -1rem darken(lightgray, 30))

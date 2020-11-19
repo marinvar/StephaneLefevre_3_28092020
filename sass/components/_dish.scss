@@ -6,8 +6,9 @@
     background-color: map-get($color, card-background);
     line-height: map-get($line-height, resto-li);
     overflow: hidden;
-    max-width: 26rem;
+    max-width: 30rem;
     display: flex;
+    justify-content: center;
     animation: fadein map-get($anim-dur, medium) ease-in-out both;
     @for $i from 1 to 10 {
       &.li#{$i} {
@@ -16,6 +17,13 @@
     }
     .__served-with {
       display: flex;
+      overflow: auto;
+      flex-direction: column;
+      h3 {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
       &--truncate {
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -23,16 +31,6 @@
         overflow-wrap: break-word;
         overflow: hidden;
         margin-right: map-get($margin, small);
-      }
-    }
-    &:hover .__served-with {
-      &--truncate {
-        animation: truncate map-get($anim-dur, xshort) ease both;
-      }
-    }
-    &:not(:hover) .__served-with {
-      &--truncate {
-        animation: no-truncate map-get($anim-dur, short) ease both;
       }
     }
     &:hover .fa-check-circle {
@@ -46,10 +44,9 @@
     }
     .dish {
       width: 100%;
+      overflow: hidden;
+      display: flex;
       padding: map-get($padding, small);
-      .served-with {
-        display: flex;
-      }
     }
   }
 
@@ -100,24 +97,6 @@
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes truncate {
-  0% {  
-    max-width: 20rem;
-  }
-  100% {
-    max-width: 16rem;
-  }
-}
-
-@keyframes no-truncate {
-  0% {  
-    max-width: 16rem;
-  }
-  100% {
-    max-width: 20rem;
   }
 }
 

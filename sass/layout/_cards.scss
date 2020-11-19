@@ -1,13 +1,21 @@
 .home-cards {
   h2 {
     padding-left: map-get($padding, large);
+    margin: auto;
+  }
+  &__cards {
+    margin: map-get($margin, large) auto;
   }
   a {
     display: block;
-    margin: auto;
-    padding: map-get($padding, medium) 0;
+    margin: map-get($margin, large) auto;
+    padding: 0;
     width: fit-content;
     color: map-get($color, font-color);
+    border-radius: map-get($radius, medium);
+    &:hover {
+      box-shadow: map-get($shadow, cards);
+    }
     figure {
       border-radius: map-get($radius, medium);
       width: map-get($img, width);
@@ -28,10 +36,13 @@
       }
     }
   }
+  
 }
 
 @media (min-width: 768px) {
-  .__cards {
-    columns: 2;
+  .home-cards {
+    &__cards {
+      columns: 2;
+    }
   }
 }
