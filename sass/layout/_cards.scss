@@ -5,8 +5,10 @@
   }
   &__cards {
     margin: map-get($margin, large) auto;
+    text-align: center;
   }
   a {
+    text-align: left;
     display: block;
     margin: map-get($margin, large) auto;
     padding: 0;
@@ -43,6 +45,9 @@
   .home-cards {
     &__cards {
       columns: 2;
+      a {
+        display: inline-block;
+      }
     }
   }
 }

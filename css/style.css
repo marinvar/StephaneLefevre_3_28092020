@@ -6265,8 +6265,10 @@ main.home-main .home-cards {
 }
 .home-cards__cards {
   margin: 1.69rem auto;
+  text-align: center;
 }
 .home-cards a {
+  text-align: left;
   display: block;
   margin: 1.69rem auto;
   padding: 0;
@@ -6300,6 +6302,9 @@ main.home-main .home-cards {
 @media (min-width: 768px) {
   .home-cards__cards {
     columns: 2;
+  }
+  .home-cards__cards a {
+    display: inline-block;
   }
 }
 footer {
