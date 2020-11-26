@@ -6596,6 +6596,9 @@ button:hover::before, .heading__explore-button:hover::before {
   .heading__large .heading__location-input {
     border-radius: 1.923rem;
   }
+  .heading__large .heading__location-input:hover::before {
+    border-radius: 1.923rem;
+  }
   .heading__large .heading__map {
     margin: 0.4rem auto;
     display: block;
