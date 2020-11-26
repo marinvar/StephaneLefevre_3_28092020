@@ -44,6 +44,9 @@
       }
       &__location-input {
         border-radius: map-get($radius, large);
+        &:hover::before {
+          border-radius: map-get($radius, large);
+        }
       }
       &__map {
         margin: map-get($margin, xsmall) auto;
